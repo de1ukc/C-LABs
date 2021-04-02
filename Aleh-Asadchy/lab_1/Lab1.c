@@ -18,7 +18,7 @@ int main(){
     }
     a += n/ 3;
 /*
-        int k;       //если нужно вз€ть за большинство п€тЄрки(100 дл€ примера)
+        int k;       //if you need to take as 5 (for exaple 100)
         k = a / 5;
         a -= k * 5;
         b += k * 3;
