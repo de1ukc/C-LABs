@@ -4,9 +4,9 @@
 #include <math.h>
 //var 2.1(11)
 
-int a; // действительная часть комплексного числа
+int a; // the real part of a complex number
 char symbol;
-int b; // мнимая часть комплексного числа
+int b; // imaginary part of a complex number
 const char i = 'i';
 
 void entering(){
