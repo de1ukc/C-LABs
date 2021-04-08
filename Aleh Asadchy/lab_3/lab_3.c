@@ -78,10 +78,19 @@ while(flags[i][j] == 0)
 for (int i = (N*N) - 1; i >= 0; i--)
     printf("%d%c",b[i],' ');
 
-
+        for(int i = 0 ; i < N; ++i)
+        {
+            free(a[i]);
+        }
            free(a);
-           free(b);
+    
+        for(int i = 0 ; i < N; ++i)
+        {
+            free(flags[i]);
+        }
            free(flags);
+            free(b);
+           
 
     return 0;
 }
