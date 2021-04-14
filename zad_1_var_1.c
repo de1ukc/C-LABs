@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-#define LONG_STR 80 /* длина вводимой строки */
-#define MAX_WORD 40 /* максимальное количество слов в строке */
-//ctrl+z == остановить ввод
+#define LONG_STR 80 /* Г¤Г«ГЁГ­Г  ГўГўГ®Г¤ГЁГ¬Г®Г© Г±ГІГ°Г®ГЄГЁ */
+#define MAX_WORD 40 /* Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г®ГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±Г«Г®Гў Гў Г±ГІГ°Г®ГЄГҐ */
+//ctrl+z == Г®Г±ГІГ Г­Г®ГўГЁГІГј ГўГўГ®Г¤
 void main(void)
 {
     char *word[MAX_WORD], separator[] = " ,.?!;:", str[LONG_STR];
@@ -28,9 +28,9 @@ void main(void)
         }
     }
    // printf("%d%c", k, '\n');
-    for (int i = 0; i < k; i++) {
+    for (int i = 0; i < k; i++) 
+    {
         puts(word[i]);
-//        free(word[i]);
     }
 
 }
