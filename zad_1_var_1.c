@@ -29,7 +29,7 @@ return ans;
 }
 
 int check(char *a, char b) {
-    for(int j = 0; j < strlen(a); j++) if(a[j] == b) return 1;
+    for(int j = 0; j < my_strlen(a); j++) if(a[j] == b) return 1;
     return 0;
 }
 char * my_strtok(char * str, const char * delim)
@@ -58,23 +58,22 @@ void main(void)
 {
     char *word[MAX_WORD], separator[] = " ,.?!;:", str[LONG_STR];
     int k = 0;
-    char abc[5] = "hui";
     while(1)
     {
         char *str = malloc(sizeof(char) * LONG_STR);
         if(!gets(str)) {free(str); break;}
 
         str[LONG_STR - 1] = '\0';
-        char *p = strtok(str, separator);
+        char *p = my_strtok(str, separator);
         while (p) {
-            word[k++] = (char*)malloc (strlen(p));
+            word[k++] = (char*)malloc (my_strlen(p));
             my_strcpy(word[k-1],p);
             p = my_strtok(NULL, separator);
         }
         free(str);
     }
     for(int i = 0; i < k; i++) {
-        for(int j = i + 1; j < k; j++) if(strlen(word[i]) > strlen(word[j]) ){
+        for(int j = i + 1; j < k; j++) if(my_strlen(word[i]) > my_strlen(word[j]) ){
             char *tmp;
             tmp = word[j];
             word[j] = word[i];
