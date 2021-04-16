@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-#define LONG_STR 80 /* äëèíà ââîäèìîé ñòðîêè */
-#define MAX_WORD 40 /* ìàêñèìàëüíîå êîëè÷åñòâî ñëîâ â ñòðîêå */
-//ctrl+z == îñòàíîâèòü ââîä
+#define LONG_STR 80 
+#define MAX_WORD 40 
+//ctrl+z == end of entering 
 void main(void)
 {
     char *word[MAX_WORD], separator[] = " ,.?!;:", str[LONG_STR];
@@ -31,6 +31,7 @@ void main(void)
     for (int i = 0; i < k; i++) 
     {
         puts(word[i]);
+        free(word[i]);
     }
 
 }
