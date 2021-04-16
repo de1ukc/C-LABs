@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define N 128 /* количество символов в строке */
+#define N 128 /* РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ РІ СЃС‚СЂРѕРєРµ */
 int check(char *a, char *b) {
     if(strlen(a) != strlen(b)) {
         return 0;
@@ -14,7 +14,7 @@ void main(void)
 {
     FILE *fp;
     fp = fopen("000.txt", "r");
-    if (!fp) exit(1); /* если файл не найден – выход */
+    if (!fp) exit(1); /* РµСЃР»Рё С„Р°Р№Р» РЅРµ РЅР°Р№РґРµРЅ вЂ“ РІС‹С…РѕРґ */
     char *word[80];
     int k =0;
     while (1){
@@ -24,11 +24,16 @@ void main(void)
         word[k++] = buffer;
     }
     for(int i = 0; i < k; i++)
-        for(int j = i + 1; j < k; j++) if(check(word[i], word[j]))
+        for(int j = i + 1; j < k; j++)
+        {
+            if(check(word[i], word[j]))
         {
             puts(word[i]);
             puts(word[j]);
             printf("%c", '\n');
+            free(word[j]);
+        }
+            free(word[i]);
         }
     fclose(fp);
 }
