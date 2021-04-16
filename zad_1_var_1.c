@@ -3,10 +3,62 @@
 #define LONG_STR 80 /* длина вводимой строки */
 #define MAX_WORD 40 /* максимальное количество слов в строке */
 //ctrl+z == остановить ввод
+int my_strlen(char * c)
+{ int counter = 0 ;
+int i = 0;
+    while (c[i] != '\0')
+    {
+     counter++;
+     i++;
+    }
+return counter;
+}
+
+char * my_strcpy(char *destination, char * source)
+{
+char *ans = destination;
+while (*source != '\0')
+{
+    *destination = *source;
+    destination++;
+    source++;
+}
+*destination = '\0';
+return ans;
+
+}
+
+int check(char *a, char b) {
+    for(int j = 0; j < strlen(a); j++) if(a[j] == b) return 1;
+    return 0;
+}
+char * my_strtok(char * str, const char * delim)
+{
+    static char * last = 0;
+    if (str) last = str;
+    if ((last == 0) || (*last == 0)) return 0;
+    char * c = last;
+    while(check(delim, *c)) c++;
+    if (*c == 0) return 0;
+    char * start = c;
+    while(*c && (check(delim, c)==0)) ++c;
+    if (*c == 0)
+    {
+        last = c;
+        return start;
+    }
+    *c = 0;
+    last = c+1;
+    return start;
+}
+
+
+
 void main(void)
 {
     char *word[MAX_WORD], separator[] = " ,.?!;:", str[LONG_STR];
     int k = 0;
+    char abc[5] = "hui";
     while(1)
     {
         char *str = malloc(sizeof(char) * LONG_STR);
@@ -16,8 +68,8 @@ void main(void)
         char *p = strtok(str, separator);
         while (p) {
             word[k++] = (char*)malloc (strlen(p));
-            strcpy(word[k-1],p);
-            p = strtok(NULL, separator);
+            my_strcpy(word[k-1],p);
+            p = my_strtok(NULL, separator);
         }
         free(str);
     }
@@ -34,5 +86,4 @@ void main(void)
         puts(word[i]);
         free(word[i]);
     }
-
 }
