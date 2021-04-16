@@ -21,7 +21,10 @@ void main(void)
 
         char *buffer = malloc(sizeof(char) * N);
         if(fgets(buffer, N, fp) == NULL) break;
-        word[k++] = buffer;
+        //word[k++] = buffer;
+        word[k++] = (char*)malloc(strlen(buffer));
+        strcpy(word[k-1],buffer);
+        free(buffer);
     }
     for(int i = 0; i < k; i++)
         for(int j = i + 1; j < k; j++)
@@ -31,9 +34,9 @@ void main(void)
             puts(word[i]);
             puts(word[j]);
             printf("%c", '\n');
-            free(word[j]);
         }
             free(word[i]);
         }
+        free(word);
     fclose(fp);
 }
