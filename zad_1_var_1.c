@@ -32,16 +32,17 @@ int check(char *a, char b) {
     for(int j = 0; j < my_strlen(a); j++) if(a[j] == b) return 1;
     return 0;
 }
+
 char * my_strtok(char * str, const char * delim)
 {
     static char * last = 0;
     if (str) last = str;
     if ((last == 0) || (*last == 0)) return 0;
     char * c = last;
-    while(check(delim, *c)) c++;
+    while(check(delim,*c) == 1) ++c;
     if (*c == 0) return 0;
     char * start = c;
-    while(*c && (check(delim, c)==0)) ++c;
+    while(*c && (check(delim,*c)==0)) ++c;
     if (*c == 0)
     {
         last = c;
@@ -51,8 +52,6 @@ char * my_strtok(char * str, const char * delim)
     last = c+1;
     return start;
 }
-
-
 
 void main(void)
 {
