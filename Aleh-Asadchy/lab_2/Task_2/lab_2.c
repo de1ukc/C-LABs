@@ -10,6 +10,26 @@ double fact(int n) {
 	return (double)(n * fact(n - 1));
 }
 
+double factorial (int n){
+    int i;
+    long double fact = 1;
+    if (N < 0)
+    {
+        return 0;
+    }
+    if(N == 0)
+    {
+        return 1;
+    }
+    else
+    {
+        for(i = 1; i < N; i++)
+        {
+            fact *= i;
+        }
+    }
+}
+
 int res(int x, double e){
     int n=0;
     double curr=0;
