@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main(){
+
+//printf("commented text lmao");
+printf("//this must be");
+//printf("commented text lmao");
+
+/*printf("test");
+now must be 106 bytes */
+
+printf("Hello");
+
+return 0;
+}
