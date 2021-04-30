@@ -7,7 +7,6 @@ struct node {
 struct node* New(){
     struct node *v;
     v = malloc(sizeof(struct node) * 1);
-    v -> key = malloc(sizeof(int) * 100);
     v -> l = v -> r = NULL;
     return v;
 }
