@@ -9,7 +9,6 @@ struct node* New(){
     size++;
     struct node *v;
     v = malloc(sizeof(struct node) * 1);
-    v -> x = malloc(sizeof(char) * 100);
     v -> next = NULL;
     v -> prev = NULL;
     return v;
