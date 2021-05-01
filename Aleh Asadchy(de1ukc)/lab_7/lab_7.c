@@ -4,7 +4,7 @@
 #include <windows.h>
 #include <string.h>
 #define CONST 30
-
+//Variant 22
 int fileCount = 2;
 
 void set(char * a) {
@@ -38,11 +38,11 @@ int size;
 struct Houses *head, *tail;
 };
 
-struct Buyer { // требования покупателя
+struct Buyer { // ГІГ°ГҐГЎГ®ГўГ Г­ГЁГї ГЇГ®ГЄГіГЇГ ГІГҐГ«Гї
 int square;
-int price; // цена (можно будет сторговаться, если |price - cash | <= 1000 )
+int price; // Г¶ГҐГ­Г  (Г¬Г®Г¦Г­Г® ГЎГіГ¤ГҐГІ Г±ГІГ®Г°ГЈГ®ГўГ ГІГјГ±Гї, ГҐГ±Г«ГЁ |price - cash | <= 1000 )
 char district[CONST];
-int cash; // количество денег
+int cash; // ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г¤ГҐГ­ГҐГЈ
 
 struct buyer *r, * l;
 };
