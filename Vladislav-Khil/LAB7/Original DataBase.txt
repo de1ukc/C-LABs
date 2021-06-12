@@ -1,0 +1,81 @@
+0
+Minsk
+0
+Hotel Minsk
+Prospect Nezavisimosty 11
+Hotel
+24 hours a day
+Comment
+0
+Aqua-Minsk Hotel
+118 praspekt Peramozhcau
+Hotel
+24 hours a day
+Comment
+0
+Central department store
+Prospect Nezavisimosty 54
+Department store
+09:00 - 21:00
+Comment
+0
+Victory Park
+Belarus, Minsk
+Park
+24 hours a day
+Comment
+><
+0
+Church of Saints Simone and Helena
+Ploshad Nezavisimosty 15
+The Red Church, as it is also called Minchana, is located in Independene Square.
+Comment
+<>
+0
+Grodno
+0
+Cronon 4
+tract Pyshki 19
+Hotel
+24 hours a day
+Comment
+0
+Grodno zoo
+Timiryazeva street 11
+Zoo
+09:00 - 19:00
+Comment
+><
+0
+Kolozha Church
+Kolozha street 6
+Kolozha Church - an architectural monument of Ancient Russia
+Comment
+><
+0
+Bernardine church and monastery
+Paris Commune street 1A
+Bernardine Church and Monastery - the largest Catholic parish
+Comment
+<>
+0
+Brest
+0
+Hampton by Hilton Brest 3
+Varshavskoe highway 41
+Hotel
+24 hours a day
+Comment
+0
+Archaeological Museum "Berestye"
+Fortress Avenue 15
+Museum
+10:00 - 17:30
+Comment
+><
+0
+Brest Fortress
+street of Heroes of Defense of the Brest Fortress 60
+Memorial complex "Brest Hero-Fortress"
+Comment
+<>
